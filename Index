@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+    <title>NATURVIAJES</title>
+    <style>
+        #cabecera {
+            background-image: url("imagenes/titulo.jpg");
+            background-size: cover  ;
+            background-position: center center, top center;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            font-family: oblique bold 120% cursive;
+            -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+            text-align:center;
+            margin-top: 30px;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-left: 100px;
+        }
+
+        #Mundo{
+            background-image: url("imagenes/Mundo.jpg");
+            background-size: cover  ;
+            background-position: center center, top center;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            font-family: oblique bold 120% cursive;
+            -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+            text-align:center;
+            margin-top: 30px;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-left: 100px;
+            
+        }
+
+        #Europa{
+            background-image: url("imagenes/Europa.jpg");
+            background-size: cover  ;
+            background-position: center center, top center;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            font-family: oblique bold 120% cursive;
+            -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+            text-align:center;
+            margin-top: 30px;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-left: 100px;
+            flex-direction: column;
+            margin: 20px;
+            clear:both;
+        }
+
+        #España{
+            background-image: url("imagenes/España.jpg");
+            background-size: cover  ;
+            background-position: center center, top center;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            font-family: oblique bold 120% cursive;
+            -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+            text-align:center;
+            margin-top: 30px;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-left: 100px;
+            flex-direction: column;
+            margin: 20px;
+            clear:both;
+        }
+        #tarjeta{
+            width: 42%;
+            height:550px;
+            border-radius:10px;
+            border: 1px solid black;
+            float: left;
+            margin-right: 10px;
+            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            text-align:center;
+            margin: 30px;
+            float:left;
+        }
+
+        #lateral {
+            width: 100%;
+            height: 60px;
+            color: white;
+            font-style:oblique bold 120% cursive;
+            
+            font-size: 18px;
+        }
+
+        h1{
+            color:black;
+            font-family:oblique bold 120% cursive;
+            font-size:80px;
+        }
+        .menu {
+            margin-top:30px;
+            text-align: center; 
+        }
+        .boton-menu {
+            display: inline-block;
+            
+            margin: 0 10px; 
+            padding: 10px 20px;
+            background-color: #ccc; 
+        }
+
+        .boton-menu:hover {
+            background-color: #ddd;
+        }
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="cabecera" class="row" style="width:80%; height: 300px;">
+            <h1>NATURVIAJES Viajes</h1>
+        </div>
+    <div class="menu">
+            <a href="index.php"><button class="boton-menu">Página principal</button></a>
+            <a href ="administracion.php"><button class="boton-menu">Administracion</button></a>
+            <a href ="galeria.php"><button class="boton-menu">Galeria</button></a>
+    </div>
+    <div class="row" >
+        <div class="col-8">
+            <div id="Mundo" class="row" style="height: 150px;">
+                <h1>MUNDO</h1>
+            </div> 
+                <?php
+                        $conexion = mysqli_connect("localhost","root","","prueba") or die ("la conexion ha fallado");
+                        $conexion -> set_charset("utf8");
+                        $consulta ="SELECT * FROM Viajes where categoria='Mundo'";
+                        $resultado = mysqli_query($conexion,$consulta);
+                        while($registro = mysqli_fetch_row($resultado)){
+                            echo"<div id='tarjeta'>";
+                            echo"<img style='width: 100%; height:300px;' src='imagenes/".$registro[3]."'>";
+                            echo "<h4>".$registro[1]."</h4>";
+                            echo "<h5 style='color: Green'>".$registro[2]."</h5>";
+                            echo "<h4>fecha: ".$registro[4]."</h4>";
+                            echo "</div>";
+                        }
+                    ?>
+
+            <div id="Europa" class="row" style="height: 150px;">
+                <h1>Europa</h1>
+            </div> 
+                <?php
+                    $conexion = mysqli_connect("localhost","root","","prueba") or die ("la conexion ha fallado");
+                    $conexion -> set_charset("utf8");
+                    $consulta ="SELECT * FROM Viajes where categoria='Europa'";
+                    $resultado = mysqli_query($conexion,$consulta);
+                    while($registro = mysqli_fetch_row($resultado)){
+                        echo"<div id='tarjeta'>";
+                        echo"<img style='width: 100%;height:300px;' src='imagenes/".$registro[3]."'>";
+                        echo "<h4>".$registro[1]."</h4>";
+                        echo "<h5 style='color: Green'>".$registro[2]."</h5>";
+                        echo "<h4>fecha: ".$registro[4]."</h4>";
+                        echo "</div>";
+                    }
+                ?>
+            <div id="España" class="row" style="height: 150px;">
+                <h1>España</h1>
+            </div> 
+                    <?php
+                        $conexion = mysqli_connect("localhost","root","","prueba") or die ("la conexion ha fallado");
+                        $conexion -> set_charset("utf8");
+                        $consulta ="SELECT * FROM Viajes where categoria='España'";
+                        $resultado = mysqli_query($conexion,$consulta);
+                        while($registro = mysqli_fetch_row($resultado)){
+                            echo"<div id='tarjeta'>";
+                            echo"<img style='width: 100%;height:300px;' src='imagenes/".$registro[3]."'>";
+                            echo "<h4>".$registro[1]."</h4>";
+                            echo "<h5 style='color: Green'>".$registro[2]."</h5>";
+                            echo "<h4>fecha: ".$registro[4]."</h4>";
+                            echo "</div>";
+                        }
+                    ?>
+        </div>
+            <div class="col-3">
+                <h2>Novedades</h2> 
+            
+                <?php
+                    $consulta = "SELECT TITULO FROM VIAJES ORDER BY fecha DESC LIMIT 4";
+                    $resultado = mysqli_query($conexion, $consulta);
+                    while ($registro = mysqli_fetch_row($resultado)) {
+                        echo "<h5 id='lateral' class='btn btn-primary'>" . $registro[0] . "</h5>";
+                    }
+                    mysqli_close($conexion);
+                ?>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d274489.1937210873!2d-3.679586038957289!3d40.525993701897306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1684260507704!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            </div>  
+        </div>
+    </div>
+</body>
+</html>
